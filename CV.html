@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Currículum - Desarrollador Web </title>
+	<link rel="stylesheet" href="style.css">
+
+	<style>
+		* {
+			transition: background-color 300ms linear, color 1s linear; /*Con esta clase establecemos la transición a todos los elementos del código*/
+		}
+
+		body {
+			--fondo: #fff; /*establecemos variables dentro de CSS*/
+			--texto: #333;
+			--fondonav: #333;
+			--textonav: #fff;
+			font-family: Arial, sans-serif;
+			color: var(--texto);
+			background-color: var(--fondo);
+		}
+
+		body.dark-theme {
+			--fondo: #333; /*Invertimos los colores de las variables para el modo Oscuro*/
+			--texto: #f2f2f2;
+			/*--fondonav: #fff;*//*Podemos "activar" estas clases solo si queremos que la cabecera se invierta en el modo oscuro.
+			/*--textonav: #333;*/
+		}
+
+		header {
+			background-color: var(--fondonav); /*De base tiene los colores inversos para que el modo oscuro le afecte, aunque diferente*/
+			color: var(--textonav);
+			padding: 20px 0;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 0 20px;
+			box-sizing: border-box;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: bold;
+			margin: 0;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin-bottom: 10px;
+		}
+
+		h2 {
+			font-size: 28px;
+			color: #ffa500;
+			margin: 30px 0 10px 0;
+		}
+
+		nav {
+			margin-top: 10px;
+		}
+
+		nav a {
+			color: var(--texto);
+			text-decoration: none;
+			margin-right: 10px;
+			padding: 5px 10px;
+			border-radius: 5px;
+			background-color: #ffa500;
+		}
+
+		nav a:hover {
+			background-color: var(--fondo);
+			color: var(--texto);
+		}
+
+		section {
+			padding: 80px 0;
+			box-sizing: border-box;
+		}
+
+		section h2 {
+			font-size: 28px;
+			color: var(--texto);
+			margin: 0 0 50px 0;
+			text-align: center;
+		}
+
+		section p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+
+		.experience-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-top: 50px;
+		}
+
+		.education-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-top: 50px;
+		}
+		.contact-container{
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 25px;
+		}
+		.contact-item{
+			width: calc(50% - 20px);
+			background-color: var(--fondo);
+			padding: 20px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		}
+		.contact-item h3 {
+			color:#ffa500;
+			font-size:22px;
+		}
+
+		.experience-item {
+			width: calc(50% - 20px);
+			background-color: var(--fondo);
+			padding: 20px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		}
+
+		.experience-item h3 {
+			color: #ffa500;
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+
+		.experience-item h4 {
+			font-size: 18px;
+			margin: 0 0 5px 0;
+		}
+
+		.experience-item p {
+			font-size: 16px;
+			margin: 0 0 10px 0;
+		}
+
+		.experience-item ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.experience-item li {
+			margin-bottom: 5
+		}
+		.skills-container {
+			display:flex;
+			flex-direction: row;
+		}
+		.skill-item{
+			width: calc(50% - 20px);
+			background-color: var(--fondo);
+			padding: 20px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			/*box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);*/
+		}
+		a {
+			color:#ffa500
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<h1>Daniel Jiménez Romero</h1>
+			<h2>Desarrollador Web</h2>
+			<nav>
+				<a href="#acerca">Acerca de mí</a>
+				<a href="#experiencia">Experiencia</a>
+				<a href="#educacion">Educación</a>
+				<a href="#skills">Habilidades</a>
+				<a href="#contact">Contacto</a>
+				<a href="#" id="toggle-button">Modo claro/oscuro</a>
+			</nav>
+		</div>
+
+	</header>
+
+	<section id="acerca">
+		<div class="container">
+			<br><br>
+			<h2>Acerca de mí</h2>
+			<br>
+			<h3>
+				<p>Soy un desarrollador web con experiencia en HTML, CSS, JavaScript y otras tecnologías de la web, además de 10 años de experiencia en atención al cliente. Me
+					apasiona crear soluciones elegantes y efectivas para problemas complejos y tengo un gran interés en el desarrollo de aplicaciones web y móviles. Busco una oportunidad para aplicar mis habilidades en programación y mi experiencia en atención al cliente en un entorno tecnológico dinámico</p>
+			</h3>
+
+		</div>
+	</section>
+	<section id="experiencia">
+		<div class="container">
+			<h2>Experiencia</h2>
+			<div class="experience-container">
+				<div class="experience-item">
+					<h3>Desarrollador Web</h3>
+					<h4>"La Ciudad Accesible"</h4>
+					<p>24/02/2023 - 24/06/2023</p>
+					<ul>
+						<li>Desarrollo de aplicaciones web utilizando HTML, CSS y JavaScript.</li>
+						<li>Trabajo en equipo con otros desarrolladores y diseñadores.</li>
+						<li>Colaboración con clientes para entender sus necesidades y requisitos.</li>
+						<li>Diseño de tablas relacionales y lógicas usando PHP y MySQL.</li>
+						<li>Desarrollo, diseño y seguimiento de proyectos web orientados a la accesibilidad con
+							WordPress.</li>
+						<li>Implementación de diseños de UI/UX.</li>
+						<li>Trabajo en equipo con diseñadores y otros desarrolladores.</li>
+					</ul>
+				</div>
+				<div class="experience-item">
+					<h3>Gerencia y dirección</h3>
+					<h4>"Eriador S.C"</h4>
+					<p>22/12/2016 - 01/02/2019</p>
+					<ul>
+						<li>Lideré y supervisé un equipo de empleados en la gestión diaria de la tienda, incluyendo la atención al cliente, la gestión de inventario y la organización de eventos.</li>
+						<li>Implementé estrategias de marketing y promoción para aumentar las ventas y la visibilidad de la tienda en el mercado local.</li>
+						<li>Mantuve el sitio web de la tienda, actualizando regularmente el contenido y asegurando su funcionalidad y seguridad.</li>
+						<li>Colaboré con el equipo de diseño y marketing para desarrollar campañas en redes sociales y promociones en línea para impulsar la participación y las ventas en línea.</li>
+					</ul>
+				</div>
+				<div class="experience-item">
+					<h3>Atención al cliente</h3>
+					<h4>"La fábrica"</h4>
+					<p>15/07/2021 - 20/11/2021</p>
+					<ul>
+						<li>Proporcioné un servicio al cliente excepcional, manteniendo altos estándares de calidad y atención al detalle.</li>
+						<li>Gestioné el flujo de trabajo y coordiné con el equipo para asegurar un servicio eficiente y oportuno.</li>
+						<li>Desarrollé habilidades de comunicación efectiva y resolución de conflictos en situaciones de alta presión.</li>
+						<li>Mantuve un entorno de trabajo limpio y seguro, cumpliendo con las regulaciones y normas de seguridad.</li>
+					</ul>
+				</div>
+				<div class="experience-item">
+					<h3>Asesor inmobiliario</h3>
+					<h4>"OPAU"</h4>
+					<p>10/01/2022 - 20/09/2022</p>
+					<ul>
+						<li>Proporcioné servicios de asesoría inmobiliaria a clientes, incluyendo la búsqueda de propiedades, la negociación de contratos y la gestión de transacciones.</li>
+						<li>Colaboré con el equipo de marketing para desarrollar estrategias de promoción y publicidad en línea para las propiedades en venta.</li>
+						<li>Mantuve una base de datos actualizada de propiedades y clientes utilizando herramientas de gestión inmobiliaria.</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<section id="educacion">
+		<div class="container">
+			<h2>Educación</h2>
+			<div class="education-container">
+				<div class="experience-item">
+					<h3>Formación en desarrollo web y diseño de aplicaciones.</h3>
+					<h4>"Acción Laboral"</h4>
+					<p>22/09/2022 - 22/02/2023</p>
+					<ul>
+						<li>Fundamentos de JavaScript, HTML, CSS, PHP y MySQL</li>
+						<li>Programación orientada a objetos con Js, estilos con CSS y BOOTSTRAP.</li>
+						<li>Diseño de Bases de datos relacionales con PHP y MySQL.</li>
+					</ul>
+				</div>
+				<div class="experience-item">
+					<h3>Diseño Web con WordPress</h3>
+					<h4>"Autodidacta - Udemy"</h4>
+					<ul>
+						<li>Diseño y maquetación de páginas web con WordPress.</li>
+						<li>Desarrollo y seguimiento de proyectos web orientados a la accesibilidad WCAG.</li>
+						<li>Diseño de tablas relacionales en bases de datos.</li>
+						<li>Trabajo en equipo con diseñadores y otros desarrolladores.</li>
+					</ul>
+				</div>
+				<div class="experience-item">
+					<h3>Diseño StoryTelling Videojuegos</h3>
+					<h4>"Cámara de comercio"</h4>
+					<ul>
+						<li>Diseño, guionizado y maquetación de StoryTelling en videojuegos.</li>
+						<li>Desarrollé habilidades de narración de historias y aprendí sobre la estructura narrativa en los videojuegos, lo que me permite crear experiencias web interactivas y atractivas para los usuarios</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact">
+		<div class="container">
+			<h2>Información de Contacto</h2>
+			<div class="contact-container">
+				<div class="contact-item">
+
+					<h3>Número de teléfono</h3>
+					<p>722741143</p>
+				</div>
+				<div class="contact-item">
+					<h3>Correo electrónico</h3>
+					<p>adjimenezrom@gmail.com</p>
+				</div>
+				<div class="contact-item">
+					<h3>Linkedin</h3>
+					<a href=https://www.linkedin.com/in/daniel-jim%C3%A9nez-romero-4b1363182/ target="_blank">Perfil de Linkedin</a>
+
+				</div>
+				<div class="contact-item">
+					<h3>GitHub</h3>
+			
+
+				</div>
+			</div>		
+		</div>
+	</section>
+	<br><br>				
+	<section id="skills">
+		<div class="container">
+			<h2>Habilidades</h2>
+			<div class="skills-container">
+				<div class="skill-item">
+					<p>HTML</p>
+				</div>
+				<div class="skill-item">
+					<p>CSS</p>
+				</div>
+				<div class="skill-item">
+					<p>JavaScript</p>
+				</div>
+				<div class="skill-item">
+					<p>WordPress</p>
+				</div>
+				<div class="skill-item">
+					<p>PHP</p>
+				</div>
+				<div class="skill-item">
+					<p>SQL</p>
+				</div>
+				<script type="text/javascript">
+					const toggleButton = document.querySelector('#toggle-button');//Establecemos la variable como constante enlazada al Botón
+					const body = document.querySelector('body');//Marcamos que afecte al body
+					window.addEventListener('load', () => {		//cargamos los datos previos en el DOM
+
+						toggleButton.addEventListener('click', () => {
+							body.classList.toggle('dark-theme');
+						})
+					});
+				</script>
